@@ -21,6 +21,12 @@ title __WEAPONVSCHARACTER's Class Diagram__\n
   
 
   package  {
+    class FlyingAxe {
+    }
+  }
+  
+
+  package  {
     class King {
     }
   }
@@ -28,6 +34,12 @@ title __WEAPONVSCHARACTER's Class Diagram__\n
 
   package  {
     class KnifeBehavior {
+    }
+  }
+  
+
+  package  {
+    class Knight {
     }
   }
   
@@ -59,8 +71,10 @@ title __WEAPONVSCHARACTER's Class Diagram__\n
   AxeBevaior -up-|> WeaponBevior
   BowAndArrowBehavior -up-|> WeaponBevior
   Character o-- WeaponBevior : weapon
+  FlyingAxe -up-|> WeaponBevior
   King -up-|> Character
   KnifeBehavior -up-|> WeaponBevior
+  Knight -up-|> Character
   Queen -up-|> Character
   SwordBehavior -up-|> WeaponBevior
 

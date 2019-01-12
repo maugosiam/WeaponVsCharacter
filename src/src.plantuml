@@ -19,12 +19,21 @@ title __SRC's Class Diagram__\n
   package  {
     abstract class Character {
         {abstract} + fight()
+        + setWeapon()
+    }
+  }
+  
+
+  package  {
+    class FlyingAxe {
+        + useWeapon()
     }
   }
   
 
   package  {
     class King {
+        + King()
         + fight()
     }
   }
@@ -38,6 +47,14 @@ title __SRC's Class Diagram__\n
   
 
   package  {
+    class Knight {
+        + Knight()
+        + fight()
+    }
+  }
+  
+
+  package  {
     class Program {
         {static} + main()
     }
@@ -46,6 +63,7 @@ title __SRC's Class Diagram__\n
 
   package  {
     class Queen {
+        + Queen()
         + fight()
     }
   }
@@ -68,8 +86,10 @@ title __SRC's Class Diagram__\n
   AxeBevaior -up-|> WeaponBevior
   BowAndArrowBehavior -up-|> WeaponBevior
   Character o-- WeaponBevior : weapon
+  FlyingAxe -up-|> WeaponBevior
   King -up-|> Character
   KnifeBehavior -up-|> WeaponBevior
+  Knight -up-|> Character
   Queen -up-|> Character
   SwordBehavior -up-|> WeaponBevior
 
